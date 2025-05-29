@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+    postgres:
+        image: postgres:latest
+        container_name: my-postgres
+        restart: always
+        environment:
+            POSTGRES_USER: balldev1
+            POSTGRES_PASSWORD: balldev1
+            POSTGRES_DB: balldev1
+        ports:
+            - "5432:5432"
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+
+volumes:
+    pgdata:
